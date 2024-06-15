@@ -127,7 +127,7 @@ if [ ! -f "${RELEASE_DIR}/${WASM_FILE_NAME}" ]; then
 fi
 
 # Get the CLI version
-CLI_VERSION=$(soroban --version | grep -oP 'soroban \K\S+')
+CLI_VERSION=$(soroban --version | grep -oP 'stellar \K\S+')
 
 # Calculate the SHA256 hash of the wasm file
 WASM_FILE_SHA256=$(sha256sum $wasm_file | cut -d ' ' -f 1)
