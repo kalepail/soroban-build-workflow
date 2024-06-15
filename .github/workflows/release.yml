@@ -150,7 +150,7 @@ jobs:
       
           echo "JSON to send: $JSON_OBJECT"
       
-          curl -X POST "https://api.stellar.expert/explorer/public/contract-validation/match" \
+          curl -X POST "https://api.stellar.expert/explorer/testnet/contract-validation/match" \
                -H "Content-Type: application/json" \
                -d "$JSON_OBJECT" \
                --max-time 15
