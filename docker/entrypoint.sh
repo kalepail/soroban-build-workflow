@@ -129,6 +129,8 @@ fi
 # Get the CLI version
 CLI_VERSION=$(soroban --version | grep -oP 'stellar \K\S+')
 
+wasm_file=$(find -type f -name "*.wasm")
+
 # Calculate the SHA256 hash of the wasm file
 WASM_FILE_SHA256=$(sha256sum $wasm_file | cut -d ' ' -f 1)
 
