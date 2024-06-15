@@ -35,7 +35,7 @@ jobs:
         git config user.email "github-actions@github.com"
 
     - name: Update soroban-build-workflow version
-      run: sed -i 's/ghcr.io\/stellar-expert\/soroban-build-workflow:[^"]*/ghcr.io\/stellar-expert\/soroban-build-workflow:${{ inputs.release_name }}/' .github/workflows/release.yml
+      run: sed -i 's/ghcr.io\/kalepail\/soroban-build-workflow:[^"]*/ghcr.io\/kalepail\/soroban-build-workflow:${{ inputs.release_name }}/' .github/workflows/release.yml
 
     - name: Commit and push changes using gh
       run: |
