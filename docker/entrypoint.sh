@@ -129,10 +129,8 @@ fi
 # Get the CLI version
 CLI_VERSION=$(soroban --version | grep -oP 'stellar \K\S+')
 
-wasm_file=$(find -type f -name "*.wasm")
-
 # Calculate the SHA256 hash of the wasm file
-WASM_FILE_SHA256=$(sha256sum $wasm_file | cut -d ' ' -f 1)
+WASM_FILE_SHA256=$(sha256sum $WASM_FILE_NAME | cut -d ' ' -f 1)
 
 JSON_FILE="${RELEASE_DIR}/compilation_info.json"
 jq -n --arg PACKAGE_NAME "$PACKAGE_NAME" \
